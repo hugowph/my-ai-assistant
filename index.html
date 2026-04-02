@@ -21,12 +21,9 @@
 
     /* ── Avatar ── */
     .avatar {
-      position: fixed;
-      top: 24px;
-      left: 28px;
       width: 80px;
       height: 80px;
-      z-index: 100;
+      margin-bottom: 20px;
       line-height: 0;
     }
 
@@ -268,12 +265,13 @@
 </head>
 <body>
 
-<div class="avatar">
-  <img src="/avatar.png" width="80" height="80" style="display:block" alt="Hugo Wong">
-</div>
-
 <div class="page">
   <div class="content">
+
+    <!-- Avatar -->
+    <div class="avatar">
+      <img src="/avatar.png" width="80" height="80" style="display:block" alt="Hugo Wong">
+    </div>
 
     <!-- Label -->
     <p class="eyebrow">Hugo Wong · UX Lead at HSBC</p>
