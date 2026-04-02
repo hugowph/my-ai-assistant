@@ -21,78 +21,69 @@
       color: #222;
     }
 
-    /* ── Two-column layout ── */
+    /* ── Full-viewport canvas ── */
     .page {
-      display: flex;
+      position: relative;
+      width: 100vw;
       height: 100dvh;
+      background: #ffffff;
       overflow: hidden;
-      background: #ffffff;
     }
 
-    .left-col {
-      width: 45%;
-      flex-shrink: 0;
-      height: 100%;
-      background: #ffffff;
-    }
-
-    .right-col {
-      flex: 1;
-      height: 100%;
-      padding: 48px 56px;
+    /* ── Content block: bottom-left anchor ── */
+    .content {
+      position: absolute;
+      bottom: 80px;
+      left: 60px;
+      max-width: 600px;
+      width: calc(100% - 120px);
       display: flex;
       flex-direction: column;
-      overflow: hidden;
     }
 
-    /* ── Hero ── */
-    .hero {
-      flex-shrink: 0;
-    }
-
+    /* ── Label ── */
     .eyebrow {
       font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      font-size: 10px;
-      letter-spacing: 0.2em;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #999;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
+    /* ── Heading ── */
     .heading {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 400;
       font-style: italic;
-      font-size: 48px;
+      font-size: 52px;
       color: #111;
-      line-height: 1.2;
-      margin-bottom: 8px;
+      line-height: 1.15;
+      margin-bottom: 10px;
     }
 
+    /* ── Subtitle ── */
     .subtitle {
       font-family: 'Inter', sans-serif;
       font-weight: 300;
-      font-size: 16px;
+      font-size: 18px;
       color: #888;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
       line-height: 1.6;
     }
 
     /* ── Chat area ── */
     .chat {
-      flex: 1;
-      min-height: 0;
-      max-height: 45vh;
+      width: 100%;
+      max-height: 35vh;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      gap: 20px;
-      margin-bottom: 16px;
+      gap: 16px;
+      margin-bottom: 20px;
     }
 
-    /* Hide scrollbar but keep functionality */
     .chat::-webkit-scrollbar { width: 0; }
 
     /* ── AI message ── */
@@ -100,28 +91,28 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      max-width: 92%;
+      max-width: 100%;
     }
 
     .ai-label {
       font-family: 'Inter', sans-serif;
-      font-weight: 300;
+      font-weight: 400;
       font-size: 10px;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: #999;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .bubble {
       background: #f7f6f4;
       border-radius: 4px;
-      padding: 16px 20px;
+      padding: 14px 18px;
       font-family: 'Inter', sans-serif;
       font-weight: 300;
       font-size: 13px;
       color: #333;
-      line-height: 1.9;
+      line-height: 1.85;
       word-break: break-word;
     }
 
@@ -143,11 +134,11 @@
     .user-text {
       font-family: 'Inter', sans-serif;
       font-weight: 300;
-      font-size: 14px;
+      font-size: 13px;
       font-style: italic;
       color: #999;
       text-align: right;
-      max-width: 92%;
+      max-width: 100%;
     }
 
     /* ── Typing indicator ── */
@@ -175,11 +166,7 @@
       30%            { opacity: 0.85; }
     }
 
-    /* ── Input section ── */
-    .input-section {
-      flex-shrink: 0;
-    }
-
+    /* ── Input ── */
     .input-wrap {
       position: relative;
       width: 100%;
@@ -187,7 +174,7 @@
 
     .text-input {
       width: 100%;
-      border: 1px solid #ddd;
+      border: 1px solid #ccc;
       border-radius: 50px;
       background: #ffffff;
       padding: 14px 56px 14px 22px;
@@ -205,7 +192,7 @@
     }
 
     .text-input:focus {
-      border-color: #bbb;
+      border-color: #aaa;
     }
 
     .text-input:disabled {
@@ -245,28 +232,27 @@
       fill: #fff;
     }
 
+    /* ── Disclaimer ── */
     .disclaimer {
       font-family: 'Inter', sans-serif;
       font-weight: 300;
       font-style: italic;
       font-size: 11px;
       color: #bbb;
-      margin-top: 12px;
+      margin-top: 10px;
       line-height: 1.6;
     }
 
     /* ── Mobile ── */
-    @media (max-width: 768px) {
-      .left-col {
-        display: none;
-      }
-
-      .right-col {
-        padding: 40px 24px;
+    @media (max-width: 600px) {
+      .content {
+        bottom: 40px;
+        left: 24px;
+        width: calc(100% - 48px);
       }
 
       .heading {
-        font-size: 36px;
+        font-size: 38px;
       }
 
       .subtitle {
@@ -278,43 +264,40 @@
 <body>
 
 <div class="page">
+  <div class="content">
 
-  <!-- Left column — reserved for future visual -->
-  <div class="left-col"></div>
+    <!-- Label -->
+    <p class="eyebrow">Hugo Wong · UX Lead at HSBC</p>
 
-  <!-- Right column -->
-  <div class="right-col">
+    <!-- Heading -->
+    <h1 class="heading">Meet Hugo's AI</h1>
 
-    <!-- Hero -->
-    <div class="hero">
-      <p class="eyebrow">Hugo Wong · UX Lead at HSBC</p>
-      <h1 class="heading">Meet Hugo's AI</h1>
-      <p class="subtitle">Ask anything about his experience, projects, and skills</p>
-    </div>
+    <!-- Subtitle -->
+    <p class="subtitle">Ask anything about his experience, projects, and skills</p>
 
     <!-- Chat -->
     <div class="chat" id="chat"></div>
 
     <!-- Input -->
-    <div class="input-section">
-      <div class="input-wrap">
-        <input
-          class="text-input"
-          id="input"
-          type="text"
-          placeholder="Type your question or prompt..."
-          autocomplete="off"
-          autocorrect="off"
-          spellcheck="false"
-        >
-        <button class="send-btn" id="sendBtn" aria-label="Send">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.4 20.4l17.45-7.48a1 1 0 0 0 0-1.84L3.4 3.6a1 1 0 0 0-1.39 1.06L3.5 11h8.5a.5.5 0 0 1 0 1H3.5l-1.49 6.33A1 1 0 0 0 3.4 20.4z"/>
-          </svg>
-        </button>
-      </div>
-      <p class="disclaimer">Hugo's assistant can make mistakes. Consider checking important information.</p>
+    <div class="input-wrap">
+      <input
+        class="text-input"
+        id="input"
+        type="text"
+        placeholder="Type your question or prompt..."
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false"
+      >
+      <button class="send-btn" id="sendBtn" aria-label="Send">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.4 20.4l17.45-7.48a1 1 0 0 0 0-1.84L3.4 3.6a1 1 0 0 0-1.39 1.06L3.5 11h8.5a.5.5 0 0 1 0 1H3.5l-1.49 6.33A1 1 0 0 0 3.4 20.4z"/>
+        </svg>
+      </button>
     </div>
+
+    <!-- Disclaimer -->
+    <p class="disclaimer">Hugo's assistant can make mistakes. Consider checking important information.</p>
 
   </div>
 </div>
