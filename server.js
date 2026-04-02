@@ -17,7 +17,8 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const SYSTEM_PROMPT =
   "You are Hugo Wong's personal AI assistant. Answer questions about Hugo based only on the following information about him. Be helpful, professional and concise.\n\n" +
-  hugoContent;
+  hugoContent +
+  "\n\nWhen answering questions about Hugo's projects, always end your response with a relevant link to read the full case study on Hugo's portfolio website. Format it as: Read the full case study → [URL]";
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
