@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
   <title>Hugo Wong · AI Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -14,10 +17,8 @@
     html, body {
       height: 100%;
       overflow: hidden;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 15px;
-      background: #fff;
-      color: #1a1a18;
+      background: #ffffff;
+      color: #222;
     }
 
     /* ── Page shell ── */
@@ -26,47 +27,58 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      background: #ffffff;
     }
 
     .column {
       width: 100%;
-      max-width: 720px;
+      max-width: 680px;
       height: 100%;
       display: flex;
       flex-direction: column;
-      border-left: 0.5px solid #d3d1c7;
-      border-right: 0.5px solid #d3d1c7;
     }
 
     /* ── Header ── */
     .header {
       flex-shrink: 0;
-      padding: 24px 24px 20px;
-      border-bottom: 0.5px solid #d3d1c7;
+      padding: 40px 40px 28px;
+      background: #ffffff;
     }
 
     .header-eyebrow {
-      font-size: 12px;
-      color: #8a8880;
-      letter-spacing: 0.02em;
-      margin-bottom: 6px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 12px;
     }
 
     .header-title {
-      font-size: 20px;
-      font-weight: 600;
-      color: #1a1a18;
-      letter-spacing: -0.01em;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 28px;
+      letter-spacing: 0.08em;
+      color: #111;
+      line-height: 1.2;
+    }
+
+    .header-rule {
+      margin-top: 28px;
+      border: none;
+      border-top: 1px solid #ebebeb;
     }
 
     /* ── Chat area ── */
     .chat {
       flex: 1;
       overflow-y: auto;
-      padding: 24px;
+      padding: 32px 40px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 24px;
       scroll-behavior: smooth;
     }
 
@@ -74,7 +86,7 @@
     .message-row {
       display: flex;
       align-items: flex-end;
-      gap: 10px;
+      gap: 12px;
     }
 
     .message-row.user {
@@ -84,13 +96,15 @@
     /* Avatar */
     .avatar {
       flex-shrink: 0;
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
-      background: #2C2C2A;
+      background: #111;
       color: #fff;
-      font-size: 12px;
-      font-weight: 600;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.05em;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -100,54 +114,67 @@
     /* Bubble */
     .bubble {
       max-width: 75%;
-      padding: 12px 15px;
-      font-size: 15px;
-      line-height: 1.55;
+      padding: 14px 18px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.8;
       word-break: break-word;
     }
 
     .message-row.ai .bubble {
-      background: #F1EFE8;
-      border-radius: 0 12px 12px 12px;
-      color: #1a1a18;
+      background: #f7f6f4;
+      border-radius: 2px;
+      color: #333;
     }
 
     .message-row.user .bubble {
-      background: #2C2C2A;
-      color: #fff;
-      border-radius: 12px 0 12px 12px;
+      background: #111;
+      color: #ffffff;
+      border-radius: 2px;
+    }
+
+    /* ── Markdown inside AI bubbles ── */
+    .bubble ul {
+      margin: 6px 0 4px 16px;
+      padding: 0;
+    }
+
+    .bubble li {
+      margin: 4px 0;
     }
 
     /* ── Typing indicator ── */
     .typing-dots {
       display: flex;
       align-items: center;
-      gap: 5px;
-      padding: 2px 1px;
+      gap: 6px;
+      padding: 2px 0;
     }
 
     .typing-dots span {
       display: block;
-      width: 7px;
-      height: 7px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
-      background: #8a8880;
-      animation: pulse 1.2s ease-in-out infinite;
+      background: #999;
+      animation: fade 1.4s ease-in-out infinite;
     }
 
     .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
     .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
 
-    @keyframes pulse {
-      0%, 60%, 100% { opacity: 0.25; }
-      30%            { opacity: 1; }
+    @keyframes fade {
+      0%, 60%, 100% { opacity: 0.15; }
+      30%            { opacity: 0.9; }
     }
 
     /* ── Input area ── */
     .input-area {
       flex-shrink: 0;
-      border-top: 0.5px solid #d3d1c7;
-      padding: 12px 16px 16px;
+      border-top: 1px solid #ebebeb;
+      padding: 20px 40px 32px;
+      background: #ffffff;
     }
 
     /* Chips */
@@ -155,36 +182,39 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     .chip {
-      background: #fff;
-      border: 0.5px solid #d3d1c7;
+      background: #ffffff;
+      border: 1px solid #ddd;
       border-radius: 100px;
-      padding: 7px 13px;
-      font-size: 13px;
-      color: #3a3a38;
+      padding: 6px 14px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: #666;
       cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
-      min-height: 32px;
+      transition: border-color 0.2s, color 0.2s;
+      min-height: 30px;
       display: flex;
       align-items: center;
       white-space: nowrap;
-      font-family: inherit;
     }
 
     .chip:hover {
-      background: #F1EFE8;
-      border-color: #b8b6ae;
+      border-color: #aaa;
+      color: #333;
     }
 
     .chip:active {
-      background: #e8e6de;
+      border-color: #111;
+      color: #111;
     }
 
     .chip:disabled {
-      opacity: 0.45;
+      opacity: 0.35;
       cursor: not-allowed;
       pointer-events: none;
     }
@@ -192,35 +222,37 @@
     /* Input row */
     .input-row {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       align-items: center;
     }
 
     .text-input {
       flex: 1;
       height: 44px;
-      padding: 0 14px;
-      border: 0.5px solid #d3d1c7;
-      border-radius: 22px;
-      font-size: 15px;
-      font-family: inherit;
-      color: #1a1a18;
-      background: #fff;
+      padding: 0 16px;
+      border: 1px solid #ebebeb;
+      border-radius: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #222;
+      background: #ffffff;
       outline: none;
-      transition: border-color 0.15s;
+      transition: border-color 0.2s;
       -webkit-appearance: none;
     }
 
     .text-input::placeholder {
-      color: #a8a6a0;
+      color: #bbb;
+      font-weight: 300;
     }
 
     .text-input:focus {
-      border-color: #8a8880;
+      border-color: #bbb;
     }
 
     .text-input:disabled {
-      opacity: 0.5;
+      opacity: 0.4;
       cursor: not-allowed;
     }
 
@@ -229,64 +261,44 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: #2C2C2A;
+      background: #111;
       border: none;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: opacity 0.15s;
+      transition: opacity 0.2s;
     }
 
-    .send-btn:hover  { opacity: 0.82; }
-    .send-btn:active { opacity: 0.65; }
+    .send-btn:hover  { opacity: 0.75; }
+    .send-btn:active { opacity: 0.55; }
 
     .send-btn:disabled {
-      opacity: 0.3;
+      opacity: 0.2;
       cursor: not-allowed;
     }
 
     .send-btn svg {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       fill: #fff;
     }
 
-    /* ── Markdown inside AI bubbles ── */
-    .bubble ul {
-      margin: 4px 0 2px 18px;
-      padding: 0;
-    }
-
-    .bubble li {
-      margin: 3px 0;
-    }
-
     /* ── Responsive ── */
-    @media (max-width: 720px) {
-      .column {
-        border-left: none;
-        border-right: none;
-      }
-    }
-
     @media (max-width: 600px) {
-      html, body { font-size: 14px; }
+      .header { padding: 28px 20px 20px; }
+      .header-title { font-size: 24px; }
 
-      .header { padding: 16px 16px 14px; }
-      .header-title { font-size: 18px; }
-
-      .chat { padding: 16px; gap: 14px; }
+      .chat { padding: 24px 20px; gap: 20px; }
 
       .bubble {
-        max-width: 85%;
-        font-size: 14px;
-        padding: 11px 13px;
+        max-width: 88%;
+        padding: 12px 15px;
       }
 
-      .input-area { padding: 10px 12px 14px; }
+      .input-area { padding: 16px 20px 24px; }
 
-      .chip { font-size: 12.5px; padding: 6px 12px; }
+      .chip { font-size: 10.5px; }
     }
   </style>
 </head>
@@ -299,6 +311,7 @@
     <header class="header">
       <p class="header-eyebrow">Hugo Wong · UX Lead at HSBC</p>
       <h1 class="header-title">Ask me anything about Hugo</h1>
+      <hr class="header-rule">
     </header>
 
     <!-- Chat -->
@@ -307,9 +320,9 @@
     <!-- Input area -->
     <div class="input-area">
       <div class="chips" id="chips">
-        <button class="chip" onclick="sendChip(this)">What projects has Hugo led?</button>
-        <button class="chip" onclick="sendChip(this)">What are Hugo's key skills?</button>
-        <button class="chip" onclick="sendChip(this)">How can I contact Hugo?</button>
+        <button class="chip" onclick="sendChip(this)">What has Hugo built at HSBC?</button>
+        <button class="chip" onclick="sendChip(this)">Tell me about Hugo's design process</button>
+        <button class="chip" onclick="sendChip(this)">How can I get in touch?</button>
       </div>
       <div class="input-row">
         <input
@@ -494,7 +507,7 @@
 
   // ── Welcome message ───────────────────────────────────────
 
-  appendMessage('ai', "Hi! I'm Hugo's AI assistant. Ask me about his experience, projects, or skills — I'm here to help you learn more about him.");
+  appendMessage('ai', "Hello. I'm Hugo's personal assistant. Ask me anything about his experience, projects, or approach to design.");
 </script>
 
 </body>
