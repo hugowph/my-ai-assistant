@@ -242,6 +242,33 @@
       fill: #fff;
     }
 
+    /* ── Chips ── */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .chip {
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      background: #ffffff;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .chip:hover {
+      border-color: #aaa;
+      color: #555;
+    }
+
     /* ── Disclaimer ── */
     .disclaimer {
       font-family: 'Inter', sans-serif;
@@ -285,6 +312,13 @@
 
     <!-- Chat -->
     <div class="chat" id="chat"></div>
+
+    <!-- Chips -->
+    <div class="chips" id="chips">
+      <button class="chip">What has Hugo built at HSBC?</button>
+      <button class="chip">Tell me about Hugo's design process</button>
+      <button class="chip">How can I contact Hugo?</button>
+    </div>
 
     <!-- Input -->
     <div class="input-wrap">
@@ -454,6 +488,12 @@
   }
 
   // ── Events ───────────────────────────────────────────────
+
+  document.getElementById('chips').addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    send(chip.textContent);
+  });
 
   sendBtn.addEventListener('click', () => send(input.value));
 
