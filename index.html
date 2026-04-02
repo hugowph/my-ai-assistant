@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hugo Wong · AI Assistant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,13 +26,11 @@
       height: 100dvh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       background: #ffffff;
     }
 
     .column {
       width: 100%;
-      max-width: 680px;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -471,7 +469,7 @@
     const typingRow = appendTyping();
 
     try {
-      const res  = await fetch('/chat', {
+      const res  = await fetch('https://my-ai-assistant-neon.vercel.app/chat', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ message: text }),
