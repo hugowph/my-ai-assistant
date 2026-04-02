@@ -23,6 +23,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.get("/avatar.png", (req, res) => {
+  res.sendFile(path.join(__dirname, "avatar.png"));
+});
+
 app.post("/chat", async (req, res) => {
   const { message } = req.body;
 

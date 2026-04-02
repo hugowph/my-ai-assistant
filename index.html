@@ -19,30 +19,25 @@
       color: #222;
     }
 
+    /* ── Avatar ── */
+    .avatar {
+      position: fixed;
+      top: 24px;
+      left: 28px;
+      width: 80px;
+      height: 80px;
+      z-index: 100;
+      line-height: 0;
+    }
+
     /* ── Full-viewport canvas ── */
     .page {
       display: flex;
       flex-direction: column;
-      background: #ffffff;
-    }
-
-    /* ── Hero image area ── */
-    .hero-image {
-      width: 100%;
-      height: 45vh;
-      background-color: #f0eeeb;
-      display: flex;
-      align-items: center;
       justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .hero-image-placeholder {
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      font-size: 13px;
-      color: #ccc;
-      letter-spacing: 0.05em;
+      min-height: 100vh;
+      padding: 60px;
+      background: #ffffff;
     }
 
     /* ── Content block ── */
@@ -51,7 +46,6 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      padding: 32px 28px;
     }
 
     /* ── Label ── */
@@ -258,8 +252,8 @@
 
     /* ── Mobile ── */
     @media (max-width: 600px) {
-      .content {
-        padding: 28px 20px;
+      .page {
+        padding: 40px 24px;
       }
 
       .heading {
@@ -274,13 +268,11 @@
 </head>
 <body>
 
+<div class="avatar">
+  <img src="/avatar.png" width="80" height="80" style="display:block" alt="Hugo Wong">
+</div>
+
 <div class="page">
-
-  <!-- Hero image -->
-  <div class="hero-image">
-    <span class="hero-image-placeholder">[ Your photo here ]</span>
-  </div>
-
   <div class="content">
 
     <!-- Label -->
