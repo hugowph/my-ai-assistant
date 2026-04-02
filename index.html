@@ -23,20 +23,18 @@
 
     /* ── Full-viewport canvas ── */
     .page {
-      position: relative;
-      width: 100vw;
-      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 60px;
       background: #ffffff;
-      overflow: hidden;
     }
 
-    /* ── Content block: bottom-left anchor ── */
+    /* ── Content block ── */
     .content {
-      position: absolute;
-      bottom: 80px;
-      left: 60px;
-      max-width: 600px;
-      width: calc(100% - 120px);
+      max-width: 580px;
+      width: 100%;
       display: flex;
       flex-direction: column;
     }
@@ -245,10 +243,8 @@
 
     /* ── Mobile ── */
     @media (max-width: 600px) {
-      .content {
-        bottom: 40px;
-        left: 24px;
-        width: calc(100% - 48px);
+      .page {
+        padding: 40px 24px;
       }
 
       .heading {
