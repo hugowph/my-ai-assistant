@@ -25,17 +25,11 @@
 
     /* ── Avatar ── */
     .avatar {
-      position: fixed;
-      top: 20px;
-      left: 24px;
+      display: block;
       width: 40px;
       height: 40px;
-      line-height: 0;
-      z-index: 100;
-    }
-
-    .avatar img {
       image-rendering: pixelated;
+      margin-bottom: 12px;
     }
 
     /* ── Full-viewport canvas ── */
@@ -276,16 +270,14 @@
 </head>
 <body>
 
-<!-- Avatar -->
-<div class="avatar">
-  <img src="/avatar.png" width="40" height="40" style="display:block" alt="Hugo Wong">
-</div>
-
 <div class="page">
   <div class="content">
 
     <!-- Label -->
     <p class="eyebrow">Hugo Wong · UX Lead at HSBC</p>
+
+    <!-- Avatar -->
+    <img class="avatar" src="/avatar.png" width="40" height="40" alt="Hugo Wong">
 
     <!-- Heading -->
     <h1 class="heading">Meet Hugo's AI</h1>
