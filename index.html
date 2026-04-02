@@ -21,118 +21,110 @@
       color: #222;
     }
 
-    /* ── Page shell ── */
+    /* ── Two-column layout ── */
     .page {
+      display: flex;
       height: 100dvh;
-      display: flex;
-      flex-direction: column;
+      overflow: hidden;
       background: #ffffff;
     }
 
-    .column {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ── Header ── */
-    .header {
+    .left-col {
+      width: 45%;
       flex-shrink: 0;
-      padding: 40px 40px 28px;
+      height: 100%;
       background: #ffffff;
     }
 
-    .header-eyebrow {
+    .right-col {
+      flex: 1;
+      height: 100%;
+      padding: 60px 56px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      flex-shrink: 0;
+    }
+
+    .eyebrow {
       font-family: 'Inter', sans-serif;
       font-weight: 300;
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #999;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
-    .header-title {
+    .heading {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 400;
       font-style: italic;
-      font-size: 28px;
-      letter-spacing: 0.08em;
+      font-size: 48px;
       color: #111;
       line-height: 1.2;
+      margin-bottom: 12px;
     }
 
-    .header-rule {
-      margin-top: 28px;
-      border: none;
-      border-top: 1px solid #ebebeb;
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      color: #888;
+      margin-bottom: 40px;
+      line-height: 1.6;
     }
 
     /* ── Chat area ── */
     .chat {
       flex: 1;
+      min-height: 0;
+      max-height: 45vh;
       overflow-y: auto;
-      padding: 32px 40px;
       display: flex;
       flex-direction: column;
-      gap: 24px;
-      scroll-behavior: smooth;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-bottom: 24px;
     }
 
-    /* ── Message rows ── */
-    .message-row {
+    /* Hide scrollbar but keep functionality */
+    .chat::-webkit-scrollbar { width: 0; }
+
+    /* ── AI message ── */
+    .message-row.ai {
       display: flex;
-      align-items: flex-end;
-      gap: 12px;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 92%;
     }
 
-    .message-row.user {
-      flex-direction: row-reverse;
-    }
-
-    /* Avatar */
-    .avatar {
-      flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #111;
-      color: #fff;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
-      font-size: 13px;
-      letter-spacing: 0.05em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-self: flex-end;
-    }
-
-    /* Bubble */
-    .bubble {
-      max-width: 75%;
-      padding: 14px 18px;
+    .ai-label {
       font-family: 'Inter', sans-serif;
       font-weight: 300;
-      font-size: 14px;
-      line-height: 1.8;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 6px;
+    }
+
+    .bubble {
+      background: #f7f6f4;
+      border-radius: 4px;
+      padding: 16px 20px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      color: #333;
+      line-height: 1.9;
       word-break: break-word;
     }
 
-    .message-row.ai .bubble {
-      background: #f7f6f4;
-      border-radius: 2px;
-      color: #333;
-    }
-
-    .message-row.user .bubble {
-      background: #111;
-      color: #ffffff;
-      border-radius: 2px;
-    }
-
-    /* ── Markdown inside AI bubbles ── */
     .bubble ul {
       margin: 6px 0 4px 16px;
       padding: 0;
@@ -140,6 +132,22 @@
 
     .bubble li {
       margin: 4px 0;
+    }
+
+    /* ── User message ── */
+    .message-row.user {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .user-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      font-style: italic;
+      color: #999;
+      text-align: right;
+      max-width: 92%;
     }
 
     /* ── Typing indicator ── */
@@ -155,7 +163,7 @@
       width: 5px;
       height: 5px;
       border-radius: 50%;
-      background: #999;
+      background: #aaa;
       animation: fade 1.4s ease-in-out infinite;
     }
 
@@ -164,77 +172,29 @@
 
     @keyframes fade {
       0%, 60%, 100% { opacity: 0.15; }
-      30%            { opacity: 0.9; }
+      30%            { opacity: 0.85; }
     }
 
-    /* ── Input area ── */
-    .input-area {
+    /* ── Input section ── */
+    .input-section {
       flex-shrink: 0;
-      border-top: 1px solid #ebebeb;
-      padding: 20px 40px 32px;
-      background: #ffffff;
     }
 
-    /* Chips */
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .chip {
-      background: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 100px;
-      padding: 6px 14px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      color: #666;
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
-      min-height: 30px;
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-    }
-
-    .chip:hover {
-      border-color: #aaa;
-      color: #333;
-    }
-
-    .chip:active {
-      border-color: #111;
-      color: #111;
-    }
-
-    .chip:disabled {
-      opacity: 0.35;
-      cursor: not-allowed;
-      pointer-events: none;
-    }
-
-    /* Input row */
-    .input-row {
-      display: flex;
-      gap: 12px;
-      align-items: center;
+    .input-wrap {
+      position: relative;
+      width: 100%;
     }
 
     .text-input {
-      flex: 1;
-      height: 44px;
-      padding: 0 16px;
-      border: 1px solid #ebebeb;
-      border-radius: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      background: #ffffff;
+      padding: 14px 56px 14px 22px;
       font-family: 'Inter', sans-serif;
       font-weight: 300;
       font-size: 14px;
-      color: #222;
-      background: #ffffff;
+      color: #111;
       outline: none;
       transition: border-color 0.2s;
       -webkit-appearance: none;
@@ -242,7 +202,6 @@
 
     .text-input::placeholder {
       color: #bbb;
-      font-weight: 300;
     }
 
     .text-input:focus {
@@ -255,9 +214,12 @@
     }
 
     .send-btn {
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: #111;
       border: none;
@@ -266,10 +228,11 @@
       align-items: center;
       justify-content: center;
       transition: opacity 0.2s;
+      flex-shrink: 0;
     }
 
-    .send-btn:hover  { opacity: 0.75; }
-    .send-btn:active { opacity: 0.55; }
+    .send-btn:hover  { opacity: 0.72; }
+    .send-btn:active { opacity: 0.5; }
 
     .send-btn:disabled {
       opacity: 0.2;
@@ -277,57 +240,69 @@
     }
 
     .send-btn svg {
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       fill: #fff;
     }
 
-    /* ── Responsive ── */
-    @media (max-width: 600px) {
-      .header { padding: 28px 20px 20px; }
-      .header-title { font-size: 24px; }
+    .disclaimer {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 11px;
+      color: #bbb;
+      margin-top: 12px;
+      line-height: 1.6;
+    }
 
-      .chat { padding: 24px 20px; gap: 20px; }
-
-      .bubble {
-        max-width: 88%;
-        padding: 12px 15px;
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .left-col {
+        display: none;
       }
 
-      .input-area { padding: 16px 20px 24px; }
+      .right-col {
+        padding: 40px 24px;
+      }
 
-      .chip { font-size: 10.5px; }
+      .heading {
+        font-size: 36px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
 <div class="page">
-  <div class="column">
 
-    <!-- Header -->
-    <header class="header">
-      <p class="header-eyebrow">Hugo Wong · UX Lead at HSBC</p>
-      <h1 class="header-title">Ask me anything about Hugo</h1>
-      <hr class="header-rule">
-    </header>
+  <!-- Left column — reserved for future visual -->
+  <div class="left-col"></div>
+
+  <!-- Right column -->
+  <div class="right-col">
+
+    <!-- Hero -->
+    <div class="hero">
+      <p class="eyebrow">Hugo Wong · UX Lead at HSBC</p>
+      <h1 class="heading">Meet Hugo's AI</h1>
+      <p class="subtitle">Ask anything about his experience, projects, and skills</p>
+    </div>
 
     <!-- Chat -->
     <div class="chat" id="chat"></div>
 
-    <!-- Input area -->
-    <div class="input-area">
-      <div class="chips" id="chips">
-        <button class="chip" onclick="sendChip(this)">What has Hugo built at HSBC?</button>
-        <button class="chip" onclick="sendChip(this)">Tell me about Hugo's design process</button>
-        <button class="chip" onclick="sendChip(this)">How can I get in touch?</button>
-      </div>
-      <div class="input-row">
+    <!-- Input -->
+    <div class="input-section">
+      <div class="input-wrap">
         <input
           class="text-input"
           id="input"
           type="text"
-          placeholder="Ask a question about Hugo..."
+          placeholder="Type your question or prompt..."
           autocomplete="off"
           autocorrect="off"
           spellcheck="false"
@@ -338,6 +313,7 @@
           </svg>
         </button>
       </div>
+      <p class="disclaimer">Hugo's assistant can make mistakes. Consider checking important information.</p>
     </div>
 
   </div>
@@ -347,7 +323,6 @@
   const chat    = document.getElementById('chat');
   const input   = document.getElementById('input');
   const sendBtn = document.getElementById('sendBtn');
-  const chips   = document.querySelectorAll('.chip');
 
   // ── Markdown renderer ────────────────────────────────────
 
@@ -360,7 +335,6 @@
     }
 
     function applyInline(str) {
-      // Bold first so ** isn't caught by the italic * rule
       str = str.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
       str = str.replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
       return str;
@@ -409,7 +383,6 @@
   function setDisabled(disabled) {
     input.disabled   = disabled;
     sendBtn.disabled = disabled;
-    chips.forEach(c => { c.disabled = disabled; });
   }
 
   function appendMessage(role, text) {
@@ -417,20 +390,21 @@
     row.className = `message-row ${role}`;
 
     if (role === 'ai') {
-      const avatar = document.createElement('div');
-      avatar.className = 'avatar';
-      avatar.textContent = 'H';
-      row.appendChild(avatar);
-    }
+      const label = document.createElement('div');
+      label.className = 'ai-label';
+      label.textContent = "Hugo's AI";
+      row.appendChild(label);
 
-    const bubble = document.createElement('div');
-    bubble.className = 'bubble';
-    if (role === 'ai') {
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
       bubble.innerHTML = markdownToHTML(text);
+      row.appendChild(bubble);
     } else {
-      bubble.textContent = text;
+      const userText = document.createElement('div');
+      userText.className = 'user-text';
+      userText.textContent = text;
+      row.appendChild(userText);
     }
-    row.appendChild(bubble);
 
     chat.appendChild(row);
     scrollToBottom();
@@ -441,10 +415,10 @@
     const row = document.createElement('div');
     row.className = 'message-row ai';
 
-    const avatar = document.createElement('div');
-    avatar.className = 'avatar';
-    avatar.textContent = 'H';
-    row.appendChild(avatar);
+    const label = document.createElement('div');
+    label.className = 'ai-label';
+    label.textContent = "Hugo's AI";
+    row.appendChild(label);
 
     const bubble = document.createElement('div');
     bubble.className = 'bubble';
@@ -469,7 +443,7 @@
     const typingRow = appendTyping();
 
     try {
-      const res  = await fetch('https://my-ai-assistant-neon.vercel.app/chat', {
+      const res = await fetch('https://my-ai-assistant-neon.vercel.app/chat', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ message: text }),
@@ -488,10 +462,6 @@
     }
   }
 
-  function sendChip(btn) {
-    send(btn.textContent);
-  }
-
   // ── Events ───────────────────────────────────────────────
 
   sendBtn.addEventListener('click', () => send(input.value));
@@ -502,10 +472,6 @@
       send(input.value);
     }
   });
-
-  // ── Welcome message ───────────────────────────────────────
-
-  appendMessage('ai', "Hello. I'm Hugo's personal assistant. Ask me anything about his experience, projects, or approach to design.");
 </script>
 
 </body>
