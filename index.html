@@ -15,32 +15,43 @@
     }
 
     html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
       background: #ffffff;
       color: #222;
     }
 
     /* ── Avatar ── */
     .avatar {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 20px;
+      position: fixed;
+      top: 20px;
+      left: 24px;
+      width: 40px;
+      height: 40px;
       line-height: 0;
+      z-index: 100;
+    }
+
+    .avatar img {
+      image-rendering: pixelated;
     }
 
     /* ── Full-viewport canvas ── */
     .page {
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 60px;
+      height: 100vh;
+      padding: 0 48px;
       background: #ffffff;
     }
 
     /* ── Content block ── */
     .content {
-      max-width: 580px;
       width: 100%;
+      max-width: 560px;
       display: flex;
       flex-direction: column;
     }
@@ -53,7 +64,7 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #999;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     /* ── Heading ── */
@@ -64,7 +75,7 @@
       font-size: 52px;
       color: #111;
       line-height: 1.15;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     /* ── Subtitle ── */
@@ -73,7 +84,7 @@
       font-weight: 300;
       font-size: 18px;
       color: #888;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       line-height: 1.6;
     }
 
@@ -85,7 +96,7 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .chat::-webkit-scrollbar { width: 0; }
@@ -250,7 +261,7 @@
     /* ── Mobile ── */
     @media (max-width: 600px) {
       .page {
-        padding: 40px 24px;
+        padding: 0 24px;
       }
 
       .heading {
@@ -265,13 +276,13 @@
 </head>
 <body>
 
+<!-- Avatar -->
+<div class="avatar">
+  <img src="/avatar.png" width="40" height="40" style="display:block" alt="Hugo Wong">
+</div>
+
 <div class="page">
   <div class="content">
-
-    <!-- Avatar -->
-    <div class="avatar">
-      <img src="/avatar.png" width="80" height="80" style="display:block" alt="Hugo Wong">
-    </div>
 
     <!-- Label -->
     <p class="eyebrow">Hugo Wong · UX Lead at HSBC</p>
