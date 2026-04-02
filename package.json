@@ -1,0 +1,14 @@
+{
+  "name": "my-ai-assistant",
+  "version": "1.0.0",
+  "description": "Hugo Wong's personal AI assistant",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

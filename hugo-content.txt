@@ -1,0 +1,434 @@
+# Hugo Wong — Personal AI Assistant Knowledge Base
+# Source: hugowph.com
+
+============================================================
+## ABOUT
+============================================================
+0
+Skip to Content
+Open Menu
+Close Menu
+Open Menu
+Close Menu
+Passionate at Product Management and UX Design
+Hello! I'm Hugo, an experience designer passionate about technology, culture, society.
+I am currently working as a UX Lead at HSBC, managing a global browser platform across 33 markets.
+My niche is understanding UX, Tech platforms, and Project Management at the same time.
+Master of Design Strategies
+graduated from The Hong Kong Polytechnic University.
+Check my résumé
+here
+or contact me at:
+hugowph@gmail.com
+.
+Mentor at
+adplist.org
+Guest Speaker at
+Growth Marketer Academy
+What other people are saying about Hugo.
+“Hugo is good at understanding the business goal and brand story to design a seamless UX. Highly presentable in a professional manner.”
+—
+Jack Tam
+, Group Director of Innovation & Digital Transformation of Chinachem group, Hugo worked directly with him
+“Strong sense of structure and logic, Ability to grasp complex problem situations and to provide actionable solutions. Most importantly, determination to deliver results.”
+—
+Hendrik Kuhl
+, Managing Director of Lion &Lion, Hugo reported directly to him in Lion & Lion
+“Hugo is organized, trustworthy, dependable, and performed his tasks competently. I would recommend him for any employment.”
+—
+Eric Thain
+, General Manager (Brand Development) of HK Express, Hugo reported directly to him in E&R.
+
+============================================================
+## WORK
+============================================================
+0
+Skip to Content
+Open Menu
+Close Menu
+Open Menu
+Close Menu
+Digital Account Acquisition Service Re-Design
+LEARN MORE
+Projects
+The Peninsula Hotel - Loyalty Program E2E Design
+The Peninsula In-Room Applications
+The Peninsula Hotel Website Re-Platform
+HSBC HK
+Website
+Regional Creative Video Content Production
+Service Design Research - Luxury Hotels in post COVID period
+
+============================================================
+## PROJECT: LOYALTY PROGRAM APPLICATION
+============================================================
+0
+Skip to Content
+Open Menu
+Close Menu
+Open Menu
+Close Menu
+The Peninsula Hotels - Loyalty Program End to End Design
+By the end of this case study, you’ll see the capability of leading end-to-end product design development
+by leading cross-functional teams through complex stakeholder alignment, technical constraints, and user experience design.
+You'll witness my capabilities in:
+Strategic Leadership
+: Aligning stakeholders across business, marketing, technical, and security teams
+Problem-Solving Under Pressure
+: Navigating WeChat platform limitations while meeting luxury brand standards
+Complex user flow
+: Documenting detailed complex service blueprints and technical user flows for cross-team collaboration
+Measurable Business Impact
+:
+Delivering a solution that directly addressed revenue retention challenges
+This case study exemplifies the senior-level design leadership and cross-functional collaboration skills I bring to your team.
+View fullsize
+Context
+The Peninsula Hotels China market presented a
+$2M+ revenue risk
+:
+Customer Acquisition Crisis
+:  Insufficient customer data collection compared to other markets
+Loyalty Performance Gap
+: Chinese guests showed relatively low repeat booking rates
+Communication Breakdown
+: Traditional marketing channels were failing to reach the target demographic (Digital native Gen Z)
+Competitive Pressure
+: Luxury hotel competitors were gaining market share rapidly
+Although the management jumped into solution and decided to have a mini-program in Wechat. We still want to listen to what customer actually said before kicking off the project.
+Discovery customer interview
+High-value customer
+“
+"I know of The Peninsula, but I don't hear much about it these days."
+Repeat guest
+“But I have not seen or experienced anything new recently.”
+Challenges & Responses
+Stakeholder Alignment Chaos
+The Situation
+:  The immediate issue was that stakeholders with conflicting priorities as this was a brand new project and concept in the organization.
+Business Team
+: "Launch fast, capture market share"
+Technical Team
+: "This timeline is impossible with security requirements"
+Brand Team
+: "User experience cannot compromise Peninsula's luxury positioning"
+Regional Management
+: "We need China-specific features they've never requested"
+Workshop-First Stakeholder Alignment
+What I Did
+: Designed and facilitated a 2-day intensive workshop
+Pre-work
+: Individual stakeholder interviews to understand hidden concerns
+Workshop Design
+: User story mapping methodology I adapted for hospitality
+Facilitation
+: Guided 15 stakeholders to consensus on priorities and trade-offs
+Results
+:
+80% stakeholder buy-in on feature priorities
+Clear definition of MVP vs. future releases
+Shared understanding of technical constraints and creative solutions
+Workshop Discussion in war room
+Workshop Discussion in war room
+Slide 1
+Slide 1 (current slide)
+Slide 2
+Slide 2 (current slide)
+Challenges & Responses
+Technical Constraints due to high compliance standard
+The Situation
+: How might The peninsula hotels includes WeChat mini-program into their current system and maintaining good UX and brand standard?
+Platform imposed strict interaction constraints
+Security requirements added friction to user flows
+Integration with legacy hotel systems created data consistency issues
+Dual-Track User Flow Documentation
+The Challenge
+: Technical team needed detailed specifications while business stakeholders needed high-level clarity
+My Solution
+: Created parallel documentation streams
+Executive User Flow
+: Visual storytelling for business stakeholders showing customer journey and business value
+Technical User Flow
+: Detailed interaction specifications for development team
+Impact
+: Eliminated miscommunication between business and technical teams, reducing revision cycles.
+View fullsize
+One of the key service blueprint, blending front door and back end channel
+Slide 1
+Slide 1 (current slide)
+Slide 2
+Slide 2 (current slide)
+Slide 3
+Slide 3 (current slide)
+Slide 4
+Slide 4 (current slide)
+What This Means for Your Team
+The Designer You're Hiring
+Strategic Partner
+: I connect design decisions to business outcomes
+Process Leader
+: I create methodologies that improve team effectiveness
+Problem Solver
+: I thrive in complex, multi-stakeholder environments
+Results Driver
+: I deliver measurable impact, not just beautiful interfaces
+Skills I Bring Immediately
+Workshop Facilitation
+: Align stakeholders quickly and maintain consensus
+Technical Collaboration
+: Bridge communication between design and engineering
+Service Design
+: Think systemically about user experience across touchpoints
+Project Leadership
+: Manage complex deliverables under tight deadlines
+Questions I'm Ready to Answer
+"Tell me about a time you had to influence without authority"
+"How do you handle conflicting stakeholder requirements?"
+"Describe your approach to working with technical constraints"
+"Give me an example of how you've driven business results through design"
+Want to know more and think of a project may need my skills?
+CONTACT ME
+
+============================================================
+## PROJECT: HSBC CMB CASE STUDY
+============================================================
+0
+Skip to Content
+Open Menu
+Close Menu
+Open Menu
+Close Menu
+HSBC CMB:  Transforming business acquisition in HSBC’s biggest markets
+By the end of this presentation, you'll see how I use research-driven design to discover the core issues and translating insights into actionable solutions.
+You'll witness my expertise in:
+Qualitative Research (Customer interview): Conducting comprehensive user research across 30+ SME CEOs to uncover hidden business opportunities
+Qantitative Research (A/B testing): Combining qualitative research with quantitative analytics to identify root causes of poor conversion
+Measurable Business Impact: Delivering 43% improvement in click-through rates and 15% increase in application starts
+This case demonstrates the senior-level user research and service design skills I bring to complex digital transformation challenges.
+Design Challenge
+A key business objective was to use emerging data capabilities to optimise the digital journey, personalising the experience to provide targeted storytelling and service offerings for different kinds of business customers.
+Our extensive research process in each market included:
+Depth interviews with HSBC stakeholders
+Contextual enquiries with business owners to understand their financial ecosystems
+Identifying behavioural clusters in over 3 million rows of HSBC website data
+Reviewing drop off points in the digital journey through value stream mapping
+Service safaris to open accounts with competitors
+UX / UI design and testing
+View fullsize
+Synthesis Wall done by our team in our agency war room
+User research and synthesis
+1. Business Stakeholder Interview
+By interviewing their internal stakeholders - Product Owner, Digital Marketing Team, Customer Insight Team, and Technology Team, the interviews are extremely valuable as they provided a much better product vision and roadmap. It helps us to understand the product context.
+We then realized that they treat all the products are individual and silo instead of an ecosystem or comprehensive package to the user. And it certainly not playing their advantages as the largest bank in Hong Kong.
+2. User Research & Synthesis
+Over 30 SMEs CEO, across different SME stages, were interviewed to understand better what their real needs and current experience on different SME banking experiences, from account opening to day-to-day usage.
+The Synthesis process helps us to map the end-to-end user journey and the pain points on each touchpoint.
+Data driven & testing approach
+Based on the user research, a series of A/B testing on the website, which is the main digital application channel, was launched.
+Each of the testing has its own hypothesis and measurements.
+Outcomes
+Across these markets we significantly improved HSBC business acquisition numbers:
+38.5%
+Increase in online business applications in the United Kingdom.
+6
+Months to hit annual business targets in Singapore.
+21%
+Uplift in online conversion for Sprint Business Account in Hong Kong.
+What This Means for Your Team
+The Strategic Designer You're Hiring
+Research-Driven Problem Solver
+: I use systematic investigation to uncover root causes, not just symptoms
+Cross-Functional Leader
+: I align disconnected teams around customer-centered objectives
+Business Impact Focus
+: I connect design decisions to measurable business outcomes
+Methodology Innovator
+: I create repeatable processes that improve organizational capability
+Immediate Value I Bring
+Stakeholder Alignment
+: Proven ability to facilitate collaboration across conflicting priorities
+Research Excellence
+: Expert in designing and executing complex user research programs
+Strategic Analysis
+: Skilled at combining qualitative and quantitative data for actionable insights
+Ready to Answer Your Key Questions
+"How do you handle projects with limited access or constraints?"
+I designed a research methodology that worked around access limitations while delivering comprehensive insights
+"Tell me about a time you influenced teams you didn't manage"
+I aligned 4 siloed teams around unified objectives and created lasting collaboration frameworks
+"How do you ensure your research translates to business results?"
+Every research activity was designed to directly support business decision-making, resulting in measurable improvements
+"Describe your approach to complex, multi-stakeholder projects"
+I create structured processes that manage complexity while maintaining focus on customer outcomes and business objectives
+Want to know more and think of a project may need my skills?
+Contact Me
+
+============================================================
+## PROJECT: THE PENINSULA HOTELS BSP
+============================================================
+0
+Skip to Content
+Open Menu
+Close Menu
+Open Menu
+Close Menu
+THE PENINSULA HOTELS
+In-Room Screens UI/UX Refresh
+Peninsula was going to upgrade their in-room screen hardware and to improve the screen UI/UX at the same time. We supported their research & development team on the UI/UX refresh.
+Role:
+UX / UI Designer
+Services:
+Wireframe, Template Analysis, Grid Design, Cross-Device Design, Prototyping
+Platform:
+Android Tablet & Phone
+Tools:
+Sketch, Invision, JIRA
+View fullsize
+Where the story began
+In a standard peninsula room, guests are offered to user 4 different screen devices in different sizes to control the room experience. The challenges of this project was to align different size of screen at the same time while keeping the consistent layout, look & feel at the same time. Changing one thing  could possibly changing the same thing on the other 3 devices. On top of that, the operation team are very picky on every changes as the change of screens affects all rooms.
+Approach
+We started this project by analysing the existing visual language and layout across all devices to make sure me and the UI designer understand how the icon, template, function, layout, visual are shared across different devices.
+After we had a basic understanding, we started visiting the demonstration room to understand how users are navigating the screens in the actual environment and mapping out all the locations where the screen sits. By doing so, we had a further understanding of the context and ambient of the room of how those screens work from the user perspective.
+The next thing was to conduct the gap analysis between new and old screens size to work on the information architecture of each of the screens. After all these, we then started to the production of the new screens.
+View fullsize
+Mapping out all wall panel location to understand the context
+View fullsize
+UI Production WIP
+Result
+A total number more than 70 screens were produced in 6 months with rounds of changes requested by the client.
+Want to know more and think of a project may need my skills?
+CONTACT ME
+
+============================================================
+## PROJECT: THE PENINSULA HOTELS CASE STUDY
+============================================================
+0
+Skip to Content
+Open Menu
+Close Menu
+Open Menu
+Close Menu
+THE PENINSULA HOTELS
+Website Redesign
+Peninsula had seen consistent growth within the luxury travel sector,  however there was a need to update and refresh its website and booking  functions in order to maximise its sales potential and provide a  best-in-class experience for its guests.
+Role:
+UX Project Manager, UX Designer
+Services:
+Agile Project Management, Visual Design Analysis, Wireframe, Prototyping
+Platform:
+Responsive Website with 3 breakpoints
+Tools:
+Sketch, Invision, JIRA
+View fullsize
+Where the story began
+The main challenge was that the visual design was built without UX consideration before I join the team. I need to review all the visual design to reverse engineering the process and user flow for client and developer’s understanding. After the website relaunch, I am in charge of their website design projects.
+Approach
+My key role is to support the product owner, Director of E-Commerce in Peninsula, ensuring the product quality and standard are up to Peninsula Standard. Below are some key activities to solve the design challenges:
+Review all existing wireframes and Visual Design
+Review the responsive mobile and desktop visual design alinement and consistency
+Engage with stakeholder to understand the requirements
+Prepare working session with client on renewing the interaction and user behavior
+Provide refreshed prototype for development and iteration
+Participate daily stand-up meeting with cross-functional teams - design, development, QA & Client
+Retrospective after each sprint
+After the re-platform, a strategic pipeline was developed to support the continuous improvement and optimisation for the website experience. The Peninsula & Newsroom were then redesigned and relaunched afterwards.
+View fullsize
+Design Projects I handled
+View fullsize
+Website Replatform Wireframe
+Result
+After 6 sprints of hard work, the new enterprise grade peninsula website with 7 languages was successfully launch in August. The soft result is encouraging:
+27% Increase in page views
+18% Increase in revenue
+54% Increase in conversions
+With the relaunch of the peninsula website, The Peninsula Hotel’s digital ranking was raised from #47 to #11 in the Garther L2 Digital Index which is the most trustworthy digital research company in the world.
+Want to know more and think of a project may need my skills?
+CONTACT ME
+
+============================================================
+## PROJECT: JW MARRIOTT REGIONAL F&B CAMPAIGN
+============================================================
+0
+Skip to Content
+Open Menu
+Close Menu
+Open Menu
+Close Menu
+JW Marriott Hotel APAC
+Regional F&B Creative Content Production
+The brief from JW Marriott Hotel APAC marketing team was to create a series of F&B videos to promote their 5-stars chef and restaurant.
+Role:
+Assistant Producer
+Services:
+Project Management, Casting, Storyboarding, Video editing
+Tech Stack:
+Adobe Premiere Pro CC
+Where the story began
+The challenges was the team needed to brainstorm a theme that can applied to all JW Marriott Restaurants. Our team brainstormed a couple of options and finally decided to use food authenticity as the theme to tell stories about how authentic the food are that JW Marriott hotels providing to their guests.
+Approach
+My role is acting as the assistant producer to support producer throughout the entire filming process from pre-production, storyboarding, casting, shooting, editing & retouching.
+To make sure the video quality are the best-in-class, the team rented the ARRI Alexa for the video shooting. The journey from planning to shooting were closely involved the client’s physical presence.
+Taste the tradition
+from
+Hugo Wong
+on
+Vimeo
+.
+Result
+Two videos were filmed in Beijing and Mumbai as shown in the above for their regional marketing materials. The JW F&B team told us after the video launch, the restaurant booking number raised for 50%.
+Want to know more and think of a project may need my skills?
+CONTACT ME
+
+============================================================
+## PROJECT: DESIGN RESEARCH STUDY ON LUXURY HOTELS
+============================================================
+0
+Skip to Content
+Open Menu
+Close Menu
+Open Menu
+Close Menu
+Design Research Study
+The Future of Luxury Hotels : How to survive in COVID19 Crisis and Beyond
+As hotel industry is emerge from the recent economic downturn due to the pandemic, it is vital to scan ahead and understand what are the challenges and emerging opportunities that could be the innovative approach to the agenda for the hoteliers, especially luxury hotel sector.
+Role:
+Service Designer
+Services:
+UX Research, Qualitative Interview, Customer Journey Mapping, Data Analysis
+View fullsize
+Synthesis Wall - Themes
+Design Challenge
+In 2020, the travel and hospitality industry received a big hit due to the unprecedented pandemic - COVID-19. It is not uncommon to see news around hotel shut down or extremely low occupancy rate.
+This triggers my interest in the future of the hotel industry in the post-COVID19 era. When this paper is started, the hotel industry seems started to accept the new normal Hence, this paper is to study the future challenges and opportunities of the hotel industry.
+Using strategic design thinking and empirical users research, this paper hopes to give the industry practitioner mainly but limited to luxury hotels, some real world insights and opportunities from the customer point of view to cope with the future business challenges.
+Methodology & Approach
+This paper is following the core principle of convergence and divergence (which is known as double diamond) to explore the opportunity lies ahead. A modification is made to carter the limit of this paper, the processes are Discover, Analyze and Create.
+Discover phase
+, primary user research and secondary market research are conducted to understand what are the current and future challenges. The research target focuses on Millennials as they are the main economic drivers in the future.
+Analyze phase
+, from understanding to distil the insight from the research so as to define different themes into different personas.
+Create phase
+, by marrying the insight and personas to create some concept and overall strategic roadmap to overcome the challenges.
+Slide 1
+Slide 1 (current slide)
+Slide 2
+Slide 2 (current slide)
+Slide 3
+Slide 3 (current slide)
+Slide 4
+Slide 4 (current slide)
+Different opportunities present different mix of options
+Depending on the battle the luxury hotels would like to choose, hotels can design their services and direction in a strategic way via different combinations.
+Customer Caretaker
+To respond the COVID19, luxury hotels can have a better brand communication and trust to build up existing customer base and brand stickyness in midst and post COVID-19 crisis period.
+Community Curator
+To respond to the upcoming trend of biz-leisure travel pattern, luxury hotels need to reallocate their resources swiftly and precisely to capture the revenue.
+Experiential Luxury
+To respond to the increasing service expectation, luxury hotels can personalize their service to make their guest feel special.
+In short
+After making the strategic choices based on its own situation, it is where the real challenges start.
+The strategic choice is more of a overall direction of how can the luxury hotels respond to the challenges. The path to excel the personalization services lies at how the data is being collected and inform the next decision.
+A evidence-based experience design will plot out a clearheaded approach to develop a better customer experience and a truly personal experience to every customer.
+Full Version Report Download Here
+Want to know more and think of a project may need my skills?
+Contact Me
