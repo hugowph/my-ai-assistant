@@ -126,6 +126,16 @@
       word-break: break-word;
     }
 
+    .bubble a {
+      color: #555;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .bubble a:hover {
+      color: #111;
+    }
+
     .bubble ul {
       margin: 6px 0 4px 16px;
       padding: 0;
@@ -373,6 +383,8 @@
     function applyInline(str) {
       str = str.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
       str = str.replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
+      str = str.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+      str = str.replace(/(^|[\s→])(https?:\/\/[^\s<]+)/g, '$1<a href="$2" target="_blank" rel="noopener noreferrer">$2</a>');
       return str;
     }
 
