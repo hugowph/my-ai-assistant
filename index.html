@@ -425,7 +425,23 @@
   // ── Helpers ──────────────────────────────────────────────
 
   function scrollToBottom() {
-    chat.scrollTo({ top: chat.scrollHeight, behavior: 'smooth' });
+    const start = chat.scrollTop;
+    const end = chat.scrollHeight;
+    const duration = 600;
+    const startTime = performance.now();
+
+    function ease(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    }
+
+    function step(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      chat.scrollTop = start + (end - start) * ease(progress);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
   }
 
   function setDisabled(disabled) {
