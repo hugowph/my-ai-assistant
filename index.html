@@ -425,7 +425,7 @@
   // ── Helpers ──────────────────────────────────────────────
 
   function scrollToBottom() {
-    chat.scrollTop = chat.scrollHeight;
+    chat.scrollTo({ top: chat.scrollHeight, behavior: 'smooth' });
   }
 
   function setDisabled(disabled) {
