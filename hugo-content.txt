@@ -438,3 +438,34 @@ Full Version Report Download Here
 Want to know more and think of a project may need my skills?
 Contact Me
 Full case study: https://www.hugowph.com/design-research-study-on-luxury-hotels
+
+============================================================
+## Personal Project: Building a Personal AI Assistant (2026)
+============================================================
+
+Hugo built a personal AI assistant from scratch using agentic AI (Claude Code) with zero prior coding background. This project demonstrates his ability to learn new technologies rapidly and ship real products.
+
+### What was built
+A public-facing personal AI assistant at my-ai-assistant-neon.vercel.app, embedded into hugowph.com, that answers questions about Hugo's experience, projects and skills — powered by Google Gemini's free API, deployed on Vercel, built with Node.js.
+
+### Technical stack
+- Claude Code (agentic AI) — used to build the entire product via plain English instructions
+- Node.js / Express — web server with REST API endpoint
+- Google Gemini API (free tier) — AI brain powering responses
+- Vercel — deployment and hosting
+- GitHub — version control
+- HTML/CSS/JavaScript — frontend chat interface
+- Squarespace Code Block — iframe embedding into hugowph.com
+
+### Key learnings
+- System design: client-server architecture with AI backend
+- Agentic AI: how to direct Claude Code to write code, run commands, and deploy products
+- Real tools: Git, npm, REST APIs, environment variables, CORS, iframes, markdown rendering
+- Cost architecture: evaluated Anthropic API vs Google Gemini free tier and made informed decision
+- The build loop: describe → Claude builds → test → fix → deploy
+
+### What this demonstrates
+- Ability to learn new technical domains rapidly without formal coding background
+- Product thinking applied to AI and infrastructure decisions
+- Shipping real products end-to-end independently
+- Understanding of modern web architecture and deployment pipelines
